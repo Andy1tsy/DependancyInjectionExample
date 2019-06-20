@@ -11,19 +11,23 @@ namespace DependancyInjectionExample
         static void Main(string[] args)
         {
             var reader1 =  DIConfig.Configure("AdoNet");
-            reader1.Read();
+            ExecuteMethod(reader1);
             reader1.ExecuteStoredProcedure();
 
             var reader2 = DIConfig.Configure("Dapper");
-            reader2.Read();
+            ExecuteMethod(reader2);
 
             var reader3 = DIConfig.Configure("EF");
-            reader3.Read();
+            ExecuteMethod(reader3);
 
             Console.ReadLine();
         }
 
-
+        private static void ExecuteMethod(IDbReader dbReader)
+        {
+            //m.b. some logic
+            dbReader.Read();
+        }
 
     }
 }
