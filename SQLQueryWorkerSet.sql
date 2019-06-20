@@ -1,0 +1,16 @@
+--CREATE DATABASE WorkerSet
+--create table WorkerSet.dbo.Workers
+--(
+--Id int Primary key Identity(1,1),
+--Name nvarchar(50) not null,
+--BossId int not null,
+--SpecialityId int not null,
+--IsBoss bit not null
+--)
+
+--create proc sp_SelectTop
+--as
+--begin
+--select count(*)
+--from dbo.Workers
+--end
